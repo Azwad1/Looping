@@ -10,3 +10,20 @@ Sample Input:
 Sample Output:
 Yes
 """
+def is_factorial(num):
+    if num < 1:
+        return False
+    
+    factorial = 1
+    i = 1
+    
+    while factorial < num:
+        i += 1
+        factorial *= i
+    
+    return factorial == num
+n = int(input())
+if is_factorial(n):
+    print("Yes")
+else:
+    print("No")
