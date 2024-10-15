@@ -20,3 +20,23 @@ Sample Output:
 2
 1
 5
+"""
+def collatz_sequence(n):
+    count = 0  
+    sequence = []  
+
+    while n != 1:
+        sequence.append(n)  
+        if n % 2 == 0: 
+            n = n // 2
+        else:  
+            n = 3 * n + 1
+        count += 1  
+    
+    sequence.append(1) 
+    return sequence, count
+n = int(input())
+sequence, steps = collatz_sequence(n)
+for num in sequence:
+    print(num)
+print(steps)
